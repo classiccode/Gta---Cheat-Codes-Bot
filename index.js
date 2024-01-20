@@ -46,10 +46,10 @@ bot.on("callback_query", (query) => {
 
   switch (query.data) {
     case "health":
-      responseMessage = "🖤 чіт-код на здоровʼя: BAGUVIX";
+      responseMessage = "🖤 чіт-код на здоровʼя: BAGUVIX TURTLE ";
       break;
     case "weapon":
-      responseMessage = "🔫 чіт-код на зброю: LXGIWYL";
+      responseMessage = "🔫 чіт-код на зброю: LXGIWYL TOOLUP INCENDIARY HIGHEX ";
       break;
     case "other":
       responseMessage = all_codes; // Ensure 'all_codes' is defined and contains the expected data
