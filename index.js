@@ -1,5 +1,16 @@
 const TelegramBot = require("node-telegram-bot-api");
 const token = "6453093893:AAEgTRRxGvLfWuacK4yE8-mMteu5EqGrI0U";
+import express from "express";
+import cors from "cors";
+const app = express();
+app.use(express.json());
+app.use(cors({ origin: true }));
+const port = process.env.PORT || 3000;
+
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+}
+app.listen(port, () => {
 
 const bot = new TelegramBot(token, { polling: true });
 
