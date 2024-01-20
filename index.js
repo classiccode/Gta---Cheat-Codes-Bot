@@ -50,7 +50,7 @@ bot.on("message", (msg) => {
       "Вітаємо. Цей бот дає інформацію по чіт-кодах для Grant Theft Auto V."
     );
     // add buttons
-    bot.sendMessage(chatId, "Виберіть платформу", {
+    bot.sendMessage(chatId, "Виберіть тип коду:", {
       reply_markup: {
         inline_keyboard: [
           [
