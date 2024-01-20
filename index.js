@@ -98,6 +98,6 @@ bot.on("message", (msg) => {
   }
 });
 
-app.listen(PORT, () => {
+app.listen(port, () => {
   console.log(`Server is running on port ${PORT}`);
 });
