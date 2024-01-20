@@ -68,7 +68,7 @@ bot.on("message", (msg) => {
   if (msg.text == "/start") {
     bot.sendMessage(
       chatId,
-      "Вітаємо. Цей бот дає інформацію по чіт-кодах для Grant Theft Auto V."
+      "Привіт. Цей бот дає інформацію по чіт-кодах для Grant Theft Auto V."
     );
     // add buttons
     bot.sendMessage(chatId, "Виберіть тип коду:", {
