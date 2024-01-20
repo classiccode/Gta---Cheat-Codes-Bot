@@ -42,16 +42,27 @@ const all_codes = `(HOTHANDS) – Розривні удари у ближньо�
 bot.on("callback_query", (query) => {
   console.log(query.data);
   const chatId = query.message.chat.id;
-  if (query.data == "health") {
-    bot.sendMessage(chatId, "🖤 чіт-код на здоровʼя: BAGUVIX");
+  let responseMessage;
+
+  switch (query.data) {
+    case "health":
+      responseMessage = "🖤 чіт-код на здоровʼя: BAGUVIX";
+      break;
+    case "weapon":
+      responseMessage = "🔫 чіт-код на зброю: LXGIWYL";
+      break;
+    case "other":
+      responseMessage = all_codes; // Ensure 'all_codes' is defined and contains the expected data
+      break;
+    default:
+      responseMessage = "Unknown command."; // Optional: handle unknown commands
   }
-  if (query.data == "weapon") {
-    bot.sendMessage(chatId, "🔫 чіт-код на зброю: LXGIWYL");
-  }
-  if (query.data == "other") {
-    bot.sendMessage(chatId, all_codes);
-  }
+
+  bot.sendMessage(chatId, responseMessage).catch((error) => {
+    console.error("Error sending message:", error);
+  });
 });
+
 bot.on("message", (msg) => {
   const chatId = msg.chat.id;
   if (msg.text == "/start") {
